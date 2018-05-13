@@ -1,0 +1,41 @@
+spring:
+  application:
+    name: @project.name@
+  jackson:
+    default-property-inclusion: non_null
+
+info:
+  profile : ${spring.profiles.active}
+  build:
+    artifact: @project.artifactId@
+    name: @project.name@
+    description: @project.description@
+    version: @project.version@
+
+---
+spring:
+  profiles: dev
+  data:
+    mongodb:
+      database: keepcalm-foods
+      port: 32768
+
+---
+spring:
+  profiles: mlab
+  data:
+    mongodb:
+      database: ${mongo.database}
+      port: ${mongo.port}
+      host: ${mongo.host}
+      username: ${mongo.user}
+      password: ${mongo.password}
+
+---
+spring:
+  profiles: azure
+  data:
+    mongodb:
+      database: ${mongo.database}
+      port: ${mongo.port}
+      uri: mongodb://${mongo.database}:${mongo.password}@${mongo.host}:${mongo.port}/?ssl=true&replicaSet=globaldb
