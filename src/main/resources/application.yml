@@ -12,6 +12,13 @@ info:
     description: @project.description@
     version: @project.version@
 
+# GraphQL
+graphiql:
+  endpoint: /graphql
+
+
+
+
 ---
 spring:
   profiles: dev

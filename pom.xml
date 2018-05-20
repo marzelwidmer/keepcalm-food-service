@@ -30,16 +30,39 @@
         <docker-maven-plugin.version>1.0.0</docker-maven-plugin.version>
         <docker.image.prefix>keepcalmregistry.azurecr.io</docker.image.prefix>
         <evo-inflector.version>1.2.2</evo-inflector.version>
+        <graphql-spring-boot-starter.version>4.0.0</graphql-spring-boot-starter.version>
+        <graphql-java-tools.version>5.0.0</graphql-java-tools.version>
     </properties>
 
 
     <dependencies>
+        <!-- GraphQL -->
+        <dependency>
+            <groupId>com.graphql-java</groupId>
+            <artifactId>graphql-spring-boot-starter</artifactId>
+            <version>${graphql-spring-boot-starter.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.graphql-java</groupId>
+            <artifactId>graphql-java-tools</artifactId>
+            <version>${graphql-java-tools.version}</version>
+        </dependency>
+        <!-- GraphiQL -->
+        <dependency>
+            <groupId>com.graphql-java</groupId>
+            <artifactId>graphiql-spring-boot-starter</artifactId>
+            <version>${graphql-spring-boot-starter.version}</version>
+        </dependency>
+
+
+        <!-- Open CSV -->
         <dependency>
             <groupId>com.opencsv</groupId>
             <artifactId>opencsv</artifactId>
             <version>${opencsv.version}</version>
         </dependency>
 
+        <!-- EVO -->
         <dependency>
             <groupId>org.atteo</groupId>
             <artifactId>evo-inflector</artifactId>
@@ -80,6 +103,8 @@
             <artifactId>spring-boot-devtools</artifactId>
             <scope>runtime</scope>
         </dependency>
+
+        <!-- Test dependencies -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
@@ -162,8 +187,6 @@
                 <artifactId>appengine-maven-plugin</artifactId>
                 <version>${appengine-maven-plugin.version}</version>
             </plugin>
-
-
 
         </plugins>
     </build>
