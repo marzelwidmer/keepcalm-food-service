@@ -8,6 +8,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 import org.springframework.context.annotation.Bean
 
+
+
+
+
 @SpringBootApplication
 class KeepcalmFoodService (val foodRepository: FoodRepository, val personRepository: PersonRepository){
 
@@ -15,10 +19,24 @@ class KeepcalmFoodService (val foodRepository: FoodRepository, val personReposit
     fun init() = CommandLineRunner {
         val count = foodRepository.count()
         println("found $count records in Food database")
-
-
        personTestDataSet(personRepository)
     }
+
+//    @Bean
+//    fun schema(): GraphQLSchema {
+//        return GraphQLSchema.newSchema()
+//                .query(GraphQLObjectType.newObject()
+//                        .name("query")
+//                        .field { field ->
+//                            field
+//                                    .name("person")
+//                                    .type(Scalars.GraphQLString)
+//                                    .dataFetcher { environment -> "response" }
+//                        }
+//                        .build())
+//                .build()
+//    }
+
 }
 
 fun main(args: Array<String>) {

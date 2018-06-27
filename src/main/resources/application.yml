@@ -16,6 +16,10 @@ info:
 graphiql:
   endpoint: /graphql
 
+  servlet:
+    mapping: /graphql
+    enabled: true
+    corsEnabled: true
 
 
 

@@ -1,3 +1,11 @@
+Azure - Kubernetis
+-
+`az login`
+
+`az aks get-credentials -g keepcalm-kubernetes -n keepcalm-containerservice`
+
+`az acs kubernetes browse --resource-group=keepcalm-kubernetes --name=keepcalm-containerservice`
+
 Kubernetes
 -
 
@@ -29,7 +37,7 @@ make it sep by step
 
 
 Secret keepcalm-food
--
+-````
 - create base63 encoded username
 
     `echo <username> | base64`
