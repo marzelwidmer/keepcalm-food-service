@@ -37,7 +37,7 @@
 
     <dependencies>
         <!-- GraphQL -->
-        <dependency>
+       <!-- <dependency>
             <groupId>com.graphql-java</groupId>
             <artifactId>graphql-spring-boot-starter</artifactId>
             <version>4.0.0</version>
@@ -57,12 +57,12 @@
             <artifactId>graphql-java-servlet</artifactId>
             <version>5.0.0</version>
         </dependency>
-        <!-- GraphiQL -->
+        &lt;!&ndash; GraphiQL &ndash;&gt;
         <dependency>
             <groupId>com.graphql-java</groupId>
             <artifactId>graphiql-spring-boot-starter</artifactId>
             <version>4.0.0</version>
-        </dependency>
+        </dependency>-->
 
 
         <!-- Open CSV -->
